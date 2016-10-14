@@ -7,6 +7,66 @@
     <link rel="stylesheet" href="build/style.css">
 </head>
 <body>
- <h1>Welcome to Survey Theme Starter</h1>   
+ 
+  <div class="survey-body">
+     <!-- survey header -->
+     <div class="survey-header">
+         <!-- brand will go here -->
+       <div class="container">
+         <h1>Survey Header</h1>
+
+         <div class="progress-bar progress-top" title="progress bar - 99% complete">
+            <div class="progress-box-outer"><span class="progress-box-completed" style="width: 99%;"></span></div>
+            <div class="progress-text"><span class="screen-readers-only">progress bar </span>99%</div>
+        </div>
+       </div>
+     </div><!-- /survey-header -->
+
+
+   <div class="container">
+     <!-- survey form -->
+     <form>
+         <h2 class="demo-title">Inputs/Open-ended</h2>
+
+         
+         <label for="open-end">Open End</label>
+         <input type="text" name="open-end" >
+
+         <h2 class="demo-title">Checkboxes</h2>
+         
+         <label for="checkbox-one">Checkbox 1</label>
+         <input type="checkbox" name="checkbox-one">
+
+         <label for="checkbox-two">Checkbox 2</label>
+         <input type="checkbox" name="checkbox-two">
+
+         <h2 class="demo-title">Radio Buttons</h2>
+      
+
+         <label for="radio-one">Radio 1</label>
+         <input type="radio" name="radio-one">
+
+         <label for="radio-two">Radio 2</label>
+         <input type="radio" name="radio-two">
+
+         <h2 class="demo-title">Textarea</h2>
+        
+         <textarea></textarea>
+
+         <h2 class="demo-title">Select Dropdown</h2>
+        
+         <select>
+             <option value="">Option 1</option>
+             <option value="">Option 2</option>
+             <option value="">Option 3</option>
+         </select>
+
+         <h2 class="demo-title">Button</h2>
+        
+         <button>Click me!</button>
+     </form>
+   </div> 
+ </div> <!-- /survey-body -->
+
 </body>
 </html>

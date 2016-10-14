@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
+var browserSync = require('browser-sync').create();
 var concat = require('gulp-concat');
 
 // concat to one theme.less -- for production
@@ -31,9 +32,14 @@ gulp.task('less', function() {
     .pipe(gulp.dest('./build/'));
 });
 
-// watch for changes
-gulp.task('watch', function() {
-  gulp.watch('./less/*.less', ['less']);
+// watch for changes -- browserSync
+gulp.task('serve', function() {
+   browserSync.init({
+        server: './'
+  });
+
+  gulp.watch('./less/*.less', ['less']).on('change', browserSync.reload);
+  gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['serve']);

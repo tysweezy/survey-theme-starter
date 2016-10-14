@@ -1,1 +1,124 @@
 // default layout and grid
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+body {
+    background: #e3e3e3;
+}
+
+
+.survey-body > .container {
+    background: #fff;
+    padding: 5px 20px;
+    box-shadow: 1px 5px 5px #333;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 94%;
+  max-width: @container-width;
+  margin-left: auto;
+  margin-right: auto;
+  *zoom: 1;
+}
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+.col {
+  position: relative;
+  float: left;
+}
+
+.col + .col {
+  margin-left: 1.6%;
+}
+
+.col-1 {
+    width: 6.86666666667%;
+}
+
+.col-2 {
+    width: 15.3333333333%;
+}
+
+.col-3 {
+    width: 23.8%;
+}
+
+.col-4 {
+    width: 32.2666666667%;
+}
+
+.col-5 {
+    width: 40.7333333333%;
+}
+
+.col-6 {
+    width: 49.2%;
+}
+
+.col-7 {
+    width: 57.6666666667%;
+}
+
+.col-8 {
+    width: 66.1333333333%;
+}
+
+.col-9 {
+    width: 74.6%;
+}
+
+.col-10 {
+    width: 83.0666666667%;
+}
+
+.col-11 {
+    width: 91.5333333333%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
+        width: @mobile-container-width;
+        float: none;
+    }
+
+    .col + .col {
+        margin-left: 0;
+    }
+}
